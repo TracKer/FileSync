@@ -131,3 +131,5 @@ dmypy.json
 # Custom
 .private/
 .idea/
+.sync/
+.filesync/

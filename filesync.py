@@ -1,5 +1,11 @@
 from Misc.CommandLineHandler import CommandLineHandler
+from Misc.InitializationManager import InitializationManager
+from Model.FileSystemEntity import FileSystemEntity
 
+initializationManager = InitializationManager.instance()
+databaseManager = initializationManager.getDatabaseManager()
+databaseManager.registerModel(FileSystemEntity)
+databaseManager.initializeModels()
 
 commandLineHandler = CommandLineHandler()
 if commandLineHandler.getAction() == 'init':
